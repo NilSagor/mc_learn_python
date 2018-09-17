@@ -34,3 +34,16 @@ col_indices = np.arange(4)
 
 eye_coo = sparse.coo_matrix((data, (row_indices, col_indices)))
 print('COO Representations: \n{}'.format(eye_coo))
+
+%matplotlib inline
+import matplotlib.pyplot as plt 
+
+#generate a sequence number from -10 to 10 with 100 steps
+x = np.linespace(-10, 10, 100)
+
+#create a second array using sinx
+y = np.sin(x)
+
+#the plot functions makes a line chart of one array agnist another
+plt.plot(x, y , marker = 'x')
+
