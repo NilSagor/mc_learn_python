@@ -35,15 +35,29 @@ col_indices = np.arange(4)
 eye_coo = sparse.coo_matrix((data, (row_indices, col_indices)))
 print('COO Representations: \n{}'.format(eye_coo))
 
-%matplotlib inline
+#%matplotlib inline
 import matplotlib.pyplot as plt 
 
 #generate a sequence number from -10 to 10 with 100 steps
-x = np.linespace(-10, 10, 100)
+x = np.linspace(-10, 10, 100)
 
 #create a second array using sinx
 y = np.sin(x)
 
 #the plot functions makes a line chart of one array agnist another
 plt.plot(x, y , marker = 'x')
+plt.show()
 
+import pandas as pd 
+from IPython.display import display
+
+#create a simple dataset of people
+data = {'Name': ['John', 'Anna', 'Peter', 'Linda'],
+'Location': ['New York', 'Paris', 'Berlin', 'London'],
+'Age': [24, 45, 33, 23]
+}
+
+data_pandas = pd.DataFrame(data)
+#IPython.display allpws pretty printing of dataframes
+#in the Jupyter notebook
+display(data_pandas)
