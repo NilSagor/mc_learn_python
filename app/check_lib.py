@@ -52,12 +52,13 @@ import pandas as pd
 from IPython.display import display
 
 #create a simple dataset of people
-data = {'Name': ['John', 'Anna', 'Peter', 'Linda'],
-'Location': ['New York', 'Paris', 'Berlin', 'London'],
-'Age': [24, 45, 33, 23]
+data_d = {
+	'Name': ['John', 'Anna', 'Peter', 'Linda'],
+	'Location': ['New York', 'Paris', 'Berlin', 'London'],
+	'Age': [24, 45, 33, 23]
 }
 
-data_pandas = pd.DataFrame(data)
+data_pandas = pd.DataFrame(data = data_d)
 #IPython.display allpws pretty printing of dataframes
 #in the Jupyter notebook
-display(data_pandas)
+print(data_pandas)
